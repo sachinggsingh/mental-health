@@ -82,3 +82,21 @@ function onFail(error) {
     ]
   };
 }
+
+const changeTheme = document.querySelector('#theme-toggle');
+const img  = changeTheme.querySelector('img');
+let currentimg  = '/images/sun.svg';
+
+changeTheme.addEventListener('click', () => {
+  if (currentimg === '/images/sun.svg') {
+    img.src = '/images/moon.svg';
+    currentimg = '/images/moon.svg';
+    changeTheme.style.background = ' #535151';
+    document.body.classList.toggle('dark-theme');
+  } else {
+    img.src = '/images/sun.svg';
+    currentimg = '/images/sun.svg';
+    changeTheme.style.background = '  #ffffff';
+    document.body.classList.toggle('dark-theme');
+  }
+})
