@@ -34,10 +34,14 @@ body {
 }
 
 .dark-theme {
-  background-color: #535151;
+  background-color: #453e3e;
   color: #ffffff;
 }
 
+.dark-theme .list-item {
+  background-color: #333;
+  color: #fff;
+}
 .container {
   max-width: 1200px;
   padding: 2rem 1rem;
@@ -202,7 +206,15 @@ h1 {
 .main li {
   margin-bottom: 35px;
   padding: 5px;
-  background-color: #d6d5d5;
+  background-color: #ffffff;
   color: black;
   border-radius: 5px;
+}
+
+.card {
+  background-color: var(--card-background, #fff);
+}
+
+.dark-theme .card {
+  background-color: #333;
 }

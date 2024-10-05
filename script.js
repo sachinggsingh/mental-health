@@ -8,6 +8,7 @@ fetch("./data.json")
 function renderList(array) {
   array.forEach((item) => {
     const details = document.createElement("li");
+    details.classList.add('list-item'); // Add a class to the li elements
 
     details.innerHTML = `
       <h2>${item.title}</h2>
@@ -100,3 +101,6 @@ changeTheme.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
   }
 })
+document.querySelectorAll('.list-item').forEach((item) => {
+  item.classList.toggle('dark-list-item');
+});
